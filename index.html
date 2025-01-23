@@ -178,6 +178,21 @@
             height: 32px;
             border-radius: 50%;
         }
+
+        /* Added CSS for fixed aspect ratio posters */
+        .poster-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 2 / 3; /* 2:3 aspect ratio for movie posters */
+            overflow: hidden;
+            border-radius: 8px; /* Rounded edges */
+        }
+
+        .poster-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen" x-data="app()">
@@ -352,10 +367,9 @@
                     <div class="relative card-hover">
                         <a :href="'watch.html?id=' + item.id + '&type=' + (currentTab === 'movies' ? 'movie' : 'tv')"
                            class="block rounded-lg overflow-hidden bg-gray-800 cursor-pointer">
-                            <div class="relative">
+                            <div class="poster-container">
                                 <img :src="'https://image.tmdb.org/t/p/w500' + item.poster_path" 
-                                     :alt="item.title || item.name"
-                                     class="w-full h-48 sm:h-64 md:h-72 lg:h-96 object-cover">
+                                     :alt="item.title || item.name">
                                 <div class="card-overlay absolute inset-0 flex flex-col justify-end p-3 md:p-4">
                                     <h3 class="text-sm md:text-lg font-semibold" x-text="item.title || item.name"></h3>
                                     <p class="text-gray-400 text-xs md:text-sm mt-1" x-text="'⭐ ' + (item.vote_average || 'N/A') + '/10'"></p>
@@ -399,44 +413,50 @@
     </div>
 
     <!-- streaming services -->
-    <div class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-        <div class="text-center mb-6 md:mb-8">
-            <h2 class="text-xl md:text-2xl font-bold text-gray-300">Content Available From</h2>
-            <p class="text-sm md:text-base text-gray-400 mt-2">movies.archiiv.cc aggregates content from various premium streaming platforms.</p>
-        </div>
-        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center justify-items-center opacity-80">
-            <a href="https://netflix.com" target="_blank" class="transform transition-transform hover:scale-105">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
-                     alt="Netflix" 
-                     class="h-6 md:h-8 w-auto grayscale hover:grayscale-0 hover:scale-110 hover:brightness-125 transition-all duration-300 transform hover:drop-shadow-[0_0_7px_rgba(229,9,20,0.7)]">
-            </a>
-            <a href="https://www.primevideo.com" target="_blank" class="transform transition-transform hover:scale-105">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" 
-                     alt="Prime Video" 
-                     class="h-6 md:h-8 w-auto grayscale hover:grayscale-0 hover:scale-110 hover:brightness-125 transition-all duration-300 transform hover:drop-shadow-[0_0_7px_rgba(0,168,225,0.7)]">
-            </a>
-            <a href="https://www.disneyplus.com" target="_blank" class="transform transition-transform hover:scale-105">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" 
-                     alt="Disney+" 
-                     class="h-6 md:h-8 w-auto grayscale hover:grayscale-0 hover:scale-110 hover:brightness-125 transition-all duration-300 transform hover:drop-shadow-[0_0_7px_rgba(113,168,255,0.7)]">
-            </a>
-            <a href="https://www.hulu.com" target="_blank" class="transform transition-transform hover:scale-105">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Hulu_logo_%282014%29.svg" 
-                     alt="Hulu" 
-                     class="h-6 md:h-8 w-auto grayscale hover:grayscale-0 hover:scale-110 hover:brightness-125 transition-all duration-300 transform hover:drop-shadow-[0_0_7px_rgba(28,231,131,0.7)]">
-            </a>
-            <a href="https://www.max.com" target="_blank" class="transform transition-transform hover:scale-105">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" 
-                     alt="HBO Max" 
-                     class="h-6 md:h-8 w-auto grayscale hover:grayscale-0 hover:scale-110 hover:brightness-125 transition-all duration-300 transform hover:drop-shadow-[0_0_7px_rgba(116,80,254,0.7)]">
-            </a>
-            <a href="https://tv.apple.com" target="_blank" class="transform transition-transform hover:scale-105">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Apple_TV_Plus_logo.svg" 
-                     alt="Apple TV+" 
-                     class="h-6 md:h-8 w-auto grayscale hover:grayscale-0 hover:scale-110 hover:brightness-125 transition-all duration-300 transform hover:drop-shadow-[0_0_7px_rgba(0,244,244,0.7)]">
-            </a>
-        </div>
+<div class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+    <div class="text-center mb-6 md:mb-8">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-300">Content Available From</h2>
+        <p class="text-sm md:text-base text-gray-400 mt-2">movies.archiiv.cc aggregates content from various premium streaming platforms.</p>
     </div>
+    <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center justify-items-center">
+        <!-- Netflix -->
+        <a href="https://netflix.com" target="_blank" class="transform transition-transform hover:scale-105">
+            <div class="bg-purple-500/20 rounded-lg px-4 py-2 text-white hover:bg-purple-500/30 transition-colors duration-300">
+                <span class="text-sm font-medium">Netflix</span>
+            </div>
+        </a>
+        <!-- Prime Video -->
+        <a href="https://www.primevideo.com" target="_blank" class="transform transition-transform hover:scale-105">
+            <div class="bg-purple-500/20 rounded-lg px-4 py-2 text-white hover:bg-purple-500/30 transition-colors duration-300">
+                <span class="text-sm font-medium">Prime Video</span>
+            </div>
+        </a>
+        <!-- Disney+ -->
+        <a href="https://www.disneyplus.com" target="_blank" class="transform transition-transform hover:scale-105">
+            <div class="bg-purple-500/20 rounded-lg px-4 py-2 text-white hover:bg-purple-500/30 transition-colors duration-300">
+                <span class="text-sm font-medium">Disney+</span>
+            </div>
+        </a>
+        <!-- Hulu -->
+        <a href="https://www.hulu.com" target="_blank" class="transform transition-transform hover:scale-105">
+            <div class="bg-purple-500/20 rounded-lg px-4 py-2 text-white hover:bg-purple-500/30 transition-colors duration-300">
+                <span class="text-sm font-medium">Hulu</span>
+            </div>
+        </a>
+        <!-- HBO Max -->
+        <a href="https://www.max.com" target="_blank" class="transform transition-transform hover:scale-105">
+            <div class="bg-purple-500/20 rounded-lg px-4 py-2 text-white hover:bg-purple-500/30 transition-colors duration-300">
+                <span class="text-sm font-medium">HBO Max</span>
+            </div>
+        </a>
+        <!-- Apple TV+ -->
+        <a href="https://tv.apple.com" target="_blank" class="transform transition-transform hover:scale-105">
+            <div class="bg-purple-500/20 rounded-lg px-4 py-2 text-white hover:bg-purple-500/30 transition-colors duration-300">
+                <span class="text-sm font-medium">Apple TV+</span>
+            </div>
+        </a>
+    </div>
+</div>
 
     <footer class="text-gray-400 py-4 md:py-6 mt-8 md:mt-12">
         <div class="container mx-auto px-4 md:px-6 text-center">
@@ -915,11 +935,3 @@
     </script>
 </body>
 </html>
-
-<!--
- _   _                 
-| \ | | _____   ____ _ 
-|  \| |/ _ \ \ / / _` |
-| |\  | (_) \ V / (_| |
-|_| \_|\___/ \_/ \__,_|
--->
