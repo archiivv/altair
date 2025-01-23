@@ -106,6 +106,15 @@ const availableSources = [
         }
     },
     {
+        id: 'vidbinge',
+        name: 'VidBinge (4K)',
+        isFrench: false,
+        urls: {
+            movie: 'https://vidbinge.dev/embed/movie/{id}',
+            tv: 'https://vidbinge.dev/embed/tv/{id}/{season}/{episode}'
+        }
+    },
+    {
         id: 'smashystream',
         name: 'SmashyStream',
         isFrench: false,
