@@ -631,6 +631,31 @@
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const discordPopupSeen = localStorage.getItem('discordPopupSeen');
+
+            if (!discordPopupSeen) {
+                const popup = document.createElement('div');
+                popup.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75';
+                popup.innerHTML = `
+                    <div class="bg-gray-800 rounded-lg p-6 text-center space-y-4 max-w-sm">
+                        <h2 class="text-xl font-bold text-purple-400">Nova has a Discord Server!</h2>
+                        <p class="text-gray-300">Please enable an adblocker and redirect blocker <3</p>
+                        <p class="text-gray-300">This website contains no ads or redirects, but our hosts do.</p>
+                        <button id="closePopup" 
+                            class="text-gray-500 hover:text-gray-300 focus:outline-none">
+                            Dismiss
+                        </button>
+                    </div>
+                `;
+                document.body.appendChild(popup);
+
+                document.getElementById('closePopup').addEventListener('click', function() {
+                    popup.style.display = 'none';
+                    localStorage.setItem('discordPopupSeen', 'true');
+                });
+            }
+        });
 
         function app() {
             return {
