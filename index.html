@@ -193,6 +193,15 @@
             height: 100%;
             object-fit: cover; /* Ensures the image covers the container without distortion */
         }
+
+        .card-hover:hover img {
+            filter: blur(3px);
+            transition: filter 0.3s ease;
+        }
+        
+        .card-hover img {
+            transition: filter 0.3s ease;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen" x-data="app()">
