@@ -1,25 +1,17 @@
 <div align="center">
   
   ![Nova](logo.png)
-  <h1>Nova ☄️</h1>
+  <h1>Altair ☄️</h1>
   <p>
-    <a href="https://discord.gg/s9kUZw7CqP">
-      <img src="https://img.shields.io/discord/1328474718193586226?color=%237289DA&label=Discord&logo=discord&logoColor=white&style=for-the-badge" alt="Discord">
-    </a>
-    <a href="https://github.com/ambr0sial/nova/stargazers">
-      <img src="https://img.shields.io/github/stars/ambr0sial/nova?color=%23A855F7&logo=github&style=for-the-badge" alt="Stars">
-    </a>
-    <a href="https://ko-fi.com/ambrosial">
-      <img src="https://img.shields.io/badge/Support-Nova-%23A855F7?style=for-the-badge&logo=kofi&logoColor=white" alt="Support">
+    <a href="https://github.com/archiivv/nova/stargazers">
+      <img src="https://img.shields.io/github/stars/archiivv/nova?color=%23A855F7&logo=github&style=for-the-badge" alt="Stars">
     </a>
   </p>
   <h3>✨ Click, watch, enjoy. ✨</h3>
+
+  <p><strong>Altair itself is ad-free, but it happens that providers insert their own ads. For the best experience, I recommend using <a href="https://ublockorigin.com/">uBlock Origin</a>.</strong></p>
+  <p><strong>Altair is the brightest star in the constellation of Aquila and the twelfth-brightest star in the night sky. It has the Bayer designation Alpha Aquilae, which is Latinised from α Aquilae and abbreviated Alpha Aql or α Aql. (Via <a href="https://en.wikipedia.org/wiki/Altair">Wikipedia</a>)</strong></p>
   
-  <p><strong>Nova itself is ad-free, but it happens that providers insert their own ads. For the best experience, I recommend using <a href="https://ublockorigin.com/">uBlock Origin</a>.</strong></p>
-  
-  <p align="center">
-    <img alt="Nova Screenshot" src="https://iili.io/2iL3qAB.png" width="700">
-  </p>
   <br>
 </div>
 
@@ -75,39 +67,22 @@ Filtered search for better content discovery
 If the main domain is unavailable, try these alternatives:
 
 ```markdown
-🔗 https://novastream.vercel.app
-🔗 https://novastream-alt.netlify.app
-🔗 https://novastream.onrender.com
-🔗 https://nova-2bn.pages.dev
+🔗 https://novarch.netlify.app/
 ```
 
 ## 🤝 Contributing
 
-Contributions are always welcome! Feel free to open pull requests to improve Nova.
+Contributions are always welcome! Feel free to open pull requests to improve Altair.
 
 ## 📝 License
 
-You can freely host this website yourself. All we ask is that you provide proper credits by linking to this repository.
+You can freely host this website yourself. All we ask is that you provide proper credits by linking to this repository as well as the original Nova repository.
 
-## ⭐ Star History
-
-<div align="center">
-<a href="https://star-history.com/#ambr0sial/nova&Timeline">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ambr0sial/nova&type=Timeline&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ambr0sial/nova&type=Timeline" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ambr0sial/nova&type=Timeline" />
-  </picture>
-</a>
-</div>
-
-<div align="center">
-  
 ---
   
-<p>Made with ❤️ by <a href="https://github.com/ambr0sial">ambr0sial</a></p>
+<p>Made with ❤️ by <a href="https://github.com/archiivv">ARCHIIV</a></p>
 <p>
-  <a href="mailto:contact.novastream@gmail.com">contact.novastream@gmail.com</a>
+  <a href="mailto:chase@archiiv.cc">chase@archiiv.cc</a>
 </p>
   
 </div> 
