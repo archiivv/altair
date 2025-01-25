@@ -121,7 +121,6 @@ const availableSources = [
         urls: {
             movie: 'https://vidlink.pro/movie/{id}',
             tv: 'https://vidlink.pro/tv/{id}/{season}/{episode}',
-            anime: 'https://vidlink.pro/anime/{id}/{episode}/{subOrDub}?fallback=true'
         }
     },
     {
