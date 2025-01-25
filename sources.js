@@ -106,15 +106,6 @@ const availableSources = [
         }
     },
     {
-        id: 'pstream',
-        name: 'P-Stream',
-        isFrench: false,
-        urls: {
-            movie: 'https://pstream.org/movie/{id}',
-            tv: 'https://111movies.com/tv/{id}/{season}/{episode}'
-        }
-    },
-    {
         id: 'smashystream',
         name: 'SmashyStream',
         isFrench: false,
