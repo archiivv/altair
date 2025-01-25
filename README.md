@@ -67,7 +67,6 @@ Filtered search for better content discovery
 If the main domain is unavailable, try these alternatives:
 
 ```markdown
-🔗 https://movies.archiiv.cc/
 🔗 https://altair.archiiv.cc/
 🔗 https://novarch.netlify.app/
 ```
