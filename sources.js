@@ -1,7 +1,7 @@
 const adminFavorites = [
-    { id: 747188, title: 'Asteroid City', poster_path: '/hfo7pvL9Fys7rocfL4VOzw9qDEQ.jpg', vote_average: 6.5 },
-    { id: 680, title: 'Pulp Fiction', poster_path: '/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg', vote_average: 8.5 },
-    { id: 68718, title: 'Django Unchained', poster_path: '/bV0rWoiRo7pHUTQkh6Oio6irlXO.jpg', vote_average: 8.2 },
+    { id: 747188, title: 'Asteroid City', poster_path: '/hfo7pvL9Fys7rocfL4VOzw9qDEQ.jpg', vote_average: 10 },
+    { id: 680, title: 'Pulp Fiction', poster_path: '/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg', vote_average: 10 },
+    { id: 68718, title: 'Django Unchained', poster_path: '/bV0rWoiRo7pHUTQkh6Oio6irlXO.jpg', vote_average: 10 },
     // add more favorites as needed
 ];
 
