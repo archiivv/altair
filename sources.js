@@ -65,8 +65,8 @@ const availableSources = [
         name: 'VidSrc',
         isFrench: false,
         urls: {
-            movie: 'https://vidsrc.cc/v2/embed/movie/{id}?autoPlay=false',
-            tv: 'https://vidsrc.cc/v2/embed/tv/{id}/{season}/{episode}?autoPlay=false'
+            movie: 'https://vidsrc.xyz/embed/movie/{id}?autoPlay=false',
+            tv: 'https://vidsrc.xyz/embed/tv/{id}/{season}/{episode}?autoPlay=false'
         }
     },
     {
@@ -106,12 +106,12 @@ const availableSources = [
         }
     },
     {
-        id: 'vidbinge',
-        name: 'VidBinge (4K)',
+        id: 'pstream',
+        name: 'P-Stream',
         isFrench: false,
         urls: {
-            movie: 'https://vidbinge.dev/embed/movie/{id}',
-            tv: 'https://vidbinge.dev/embed/tv/{id}/{season}/{episode}'
+            movie: 'https://pstream.org/movie/{id}',
+            tv: 'https://111movies.com/tv/{id}/{season}/{episode}'
         }
     },
     {
