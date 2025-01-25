@@ -115,15 +115,6 @@ const availableSources = [
         }
     },
     {
-        id: 'vidlink',
-        name: 'VidLink',
-        isFrench: false,
-        urls: {
-            movie: 'https://vidlink.pro/movie/{id}',
-            tv: 'https://vidlink.pro/tv/{id}/{season}/{episode}',
-        }
-    },
-    {
         id: 'smashystream',
         name: 'SmashyStream',
         isFrench: false,
