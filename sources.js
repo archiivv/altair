@@ -106,6 +106,15 @@ const availableSources = [
         }
     },
     {
+        id: 'embedsu',
+        name: 'Embed SU',
+        isFrench: false,
+        urls: {
+            movie: 'https://embed.su/embed/movie/{id}',
+            tv: 'https://embed.su/embed/tv/{id}/{season}/{episode}'
+        }
+    },
+    {
         id: 'smashystream',
         name: 'SmashyStream',
         isFrench: false,
